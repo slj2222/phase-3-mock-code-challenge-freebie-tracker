@@ -4,7 +4,7 @@ class Dev < ActiveRecord::Base
 
   def received_one?(item_name)
     self.freebies.any? do |freebie|
-      freebie.item_name == item_name
+      freebie.item_name === item_name
     end
   end
 
